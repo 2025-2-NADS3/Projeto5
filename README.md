@@ -6,3 +6,31 @@
 </p>
 
 <h3 align="center">Desenvolvido por <strong>MenuUx</strong> | Fundação Escola de Comércio Álvares Penteado (FECAP)</h3>
+
+---
+
+# 👥 Integrantes
+
+---
+
+# 👨‍🏫 Orientadores
+
+---
+
+# 🧠 Sobre o Projeto
+
+### 🎯 Objetivos
+
+### 🌍 Impacto Esperado
+
+## 💻 Tecnologias Utilizadas
+
+
+
+---
+
+## 🛠 Estrutura de Pasta
+
+## 📋 Licença/License
+
+## 🎓 Referências
