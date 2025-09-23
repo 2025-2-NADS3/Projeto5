@@ -41,12 +41,11 @@ e adicioná-los diretamente ao carrinho de compras.
 ## 🔥 Funcionalidades Implementadas
 
 ### ✅ Concluídas na Primeira Entrega
-- [x] Estrutura de navegação com BottomNavigationView
-- [x] Tela `Home` com listagem de produtos usando RecyclerView
-- [x] Tela `Carrinho` para visualização dos pedidos
-- [x] Integração com Firebase Firestore para buscar produtos
-- [x] Adicionar itens ao carrinho diretamente da tela inicial
-- [x] Layout inspirado no McDonald's com foco em usabilidade
+- ✅ Estrutura de navegação com BottomNavigationView
+- ✅ Tela `Home` com listagem de produtos usando RecyclerView
+- ✅ Tela `Carrinho` para visualização dos pedidos
+- ✅ Integração com Firebase Firestore para buscar produtos
+- ✅ Adicionar itens ao carrinho diretamente da tela inicial
 
 ### 🚧 Próximas Implementações
 - [ ] Tela `Carteira` para gerenciar formas de pagamento
