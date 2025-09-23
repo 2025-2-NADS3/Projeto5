@@ -58,4 +58,4 @@ e adicioná-los diretamente ao carrinho de compras.
 ---
 
 ### Link para Acessar a Pasta do Android
-1. [Clique aqui para acessar a pasta do codigo](https://github.com/2025-1-NADS2/Projeto6/tree/main/src/Back-End/Entrega%201/Algoritimo%20e%20Estrutura%20de%20Dados)
+1. [Clique aqui para acessar a pasta do codigo](https://github.com/2025-2-NADS3/Projeto5/tree/main/src/Front-End/Entrega%201/Programa%C3%A7%C3%A3o%20Mobile)
