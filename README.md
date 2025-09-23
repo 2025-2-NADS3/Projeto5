@@ -10,7 +10,7 @@
 ---
 
 # 👥 Integrantes
-
+<h3 align="center">KAUA <strong>MenuUx</strong>
 ---
 
 # 👨‍🏫 Orientadores
