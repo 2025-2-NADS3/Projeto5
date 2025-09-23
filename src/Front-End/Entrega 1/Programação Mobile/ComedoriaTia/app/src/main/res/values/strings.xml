@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ComedoriaTia</string>
+    <string name="intro_title">"Bem-Vindo a" <font color='#F3C024'>"Comedoria da Tia"</font> </string>
+    <string name="intro_login">alreaedy have an account? <font color='#f3c024'>"Signin"</font></string>
+</resources>
