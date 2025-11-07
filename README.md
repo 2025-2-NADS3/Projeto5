@@ -15,7 +15,7 @@
 
 
 # 👨‍🏫 Orientadores
-<h3><a href="https://www.linkedin.com/in/victorbarq/?originalSubdomain=br">Vitor Rosetti</a></h3>
+<h3><a href="https://www.linkedin.com/in/victorbarq/?originalSubdomain=br">Victor Rosetti</a></h3>
 
 
 # 🧠 Sobre o Projeto
@@ -47,6 +47,65 @@ contratempos.</h3>
 ---
 
 ## 🛠 Estrutura de Pasta
+
+📁 Estrutura de Pastas — Projeto Comedoria da Tia (MenuUX / FECAP)
+🗂 Documentos/
+
+Pasta principal para entregas teóricas e relatórios acadêmicos.
+
+Documentos/
+│
+├── Entrega 1/
+│   ├── Programação Mobile/
+│   ├── Sistemas Operacionais e Arquiteturas Cloud Native/
+│   ├── Testes e Qualidade de Software (DevOps)/
+│   └── User Experience Digital/
+│
+├── Entrega 2/
+│   ├── Programação Mobile/
+│   ├── Sistemas Operacionais e Arquiteturas Cloud Native/
+│   ├── Testes e Qualidade de Software (DevOps)/
+│   └── User Experience Digital/
+│
+└── FECAP_ADS3_MenuUX.pptx.pdf
+
+
+📝 Descrição:
+
+Cada Entrega representa uma fase de desenvolvimento do projeto (ex: Entrega 1 = protótipo inicial; Entrega 2 = evolução com novas funcionalidades).
+
+Dentro de cada entrega, há pastas específicas de cada disciplina envolvida na PI:
+
+Programação Mobile: código ou relatórios focados no app.
+
+Sistemas Operacionais e Cloud Native: configurações de servidor, cloud, ou arquitetura.
+
+Testes e Qualidade de Software (DevOps): scripts e relatórios de testes automatizados ou pipelines.
+
+User Experience Digital: design, protótipos, personas, fluxos e justificativas de UX/UI.
+
+O arquivo FECAP_ADS3_MenuUX.pptx.pdf é a apresentação oficial do grupo (provavelmente usada na banca ou PI).
+
+💻 src/
+
+Contém o código-fonte prático do projeto — dividido também por entrega.
+
+src/
+│
+├── Entrega 1/
+│   ├── Back-End/cantina-backend/
+│   └── Front-End/ComedoriaTia/
+│
+└── Entrega 2/
+    ├── Back-End/
+    └── Front-End/
+
+
+🧠 Descrição:
+
+Entrega 1: contém o primeiro protótipo funcional — com o backend em uma pasta chamada cantina-backend e o frontend em ComedoriaTia.
+
+Entrega 2: representa a nova versão (melhorada e atualizada) do sistema, mantendo a separação entre back-end e front-end.
 
 ## 📋 Licença/License
 
