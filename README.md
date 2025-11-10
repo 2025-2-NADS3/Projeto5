@@ -29,14 +29,15 @@
 # 🧠 Sobre o Projeto
 
 ### 🎯 Objetivos
-<h3>O presente projeto tem como objetivo desenvolver um aplicativo para a Comedoria
-da Tia, oferecendo aos clientes uma experiência de compra mais ágil, prática e organizada.
-Atualmente, os estudantes enfrentam longas filas para adquirir suas refeições, o que gera
-atrasos e transtornos, principalmente durante os intervalos de aula.
-Com a implementação do aplicativo, os usuários poderão realizar pedidos
-antecipados, reservar e garantir seu lanche, evitando filas e desfrutando de maior
-comodidade. Essa solução também permitirá otimizar o fluxo de atendimento, reduzir a
-sobrecarga no balcão e aumentar a satisfação dos clientes</h3>
+<h3>
+O Comedoria da Tia é um aplicativo mobile desenvolvido para revolucionar a experiência de compra na cantina da FECAP. Atualmente, os estudantes enfrentam longas filas durante os intervalos, gerando atrasos e transtornos.
+
+Com nossa solução, os usuários podem:
+
+✅ Realizar pedidos antecipados
+✅ Reservar e garantir seus lanches
+✅ Evitar filas e aglomerações
+✅ Desfrutar de maior comodidade</h3>
 
 ### 🌍 Impacto Esperado
 <h3>Além de beneficiar os usuários, o sistema contribuirá para uma melhor gestão da
@@ -48,9 +49,29 @@ Dessa forma, o aplicativo cumprirá sua função principal: melhorar significati
 a experiência do cliente, tornando a compra de lanches mais simples, eficiente e sem
 contratempos.</h3>
 
-## 💻 Tecnologias Utilizadas
+## 💻 Tecnologias & Ferramentas Utilizadas
 
+📱 Frontend Mobile
 
+https://img.shields.io/badge/React_Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
+https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white
+https://img.shields.io/badge/Expo-1B1F23?style=for-the-badge&logo=expo&logoColor=white
+
+🚀 Backend & Infraestrutura
+
+https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white
+https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white
+https://img.shields.io/badge/Cloud_Native-FF6F00?style=for-the-badge&logo=kubernetes&logoColor=white
+
+🧪 Qualidade & Testes
+
+https://img.shields.io/badge/Jest-C21325?style=for-the-badge&logo=jest&logoColor=white
+https://img.shields.io/badge/DevOps-0078D7?style=for-the-badge&logo=azure-devops&logoColor=white
+
+🎨 Design & UX
+
+https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white
+https://img.shields.io/badge/Adobe_XD-FF61F6?style=for-the-badge&logo=adobexd&logoColor=white
 
 ---
 
@@ -61,36 +82,31 @@ contratempos.</h3>
 
 Pasta principal para entregas teóricas e relatórios acadêmicos.
 ```
-Documentos/
+Comedoria-da-Tia/
 │
-├── 📁 Entrega 1/
-│ ├── 📄 Programação Mobile/
-│ │ └── Implementação inicial do aplicativo e telas base.
-│ │
-│ ├── ⚙️ Sistemas Operacionais e Arquiteturas Cloud Native/
-│ │ └── Estrutura de servidores, contêineres e configuração do backend.
-│ │
-│ ├── 🧪 Testes e Qualidade de Software (DevOps)/
-│ │ └── Aplicação da norma ISO/IEC 25010, plano de qualidade e testes.
-│ │
-│ └── 🎨 User Experience Digital/
-│ └── Mockups iniciais e aplicação do framework HEART.
+├── 📁 Documentos/(Entregas teóricas e relatórios acadêmicos organizados por disciplina)
+│   ├── 📁 Entrega_1/
+│   │   ├── 📄 Programação_Mobile/
+│   │   ├── ⚙️ Sistemas_Operacionais_Cloud/
+│   │   ├── 🧪 Testes_Qualidade_Software/
+│   │   └── 🎨 User_Experience_Digital/
+│   │
+│   ├── 📁 Entrega_2/
+│   │   ├── 📄 Programação_Mobile/
+│   │   ├── ⚙️ Sistemas_Operacionais_Cloud/
+│   │   ├── 🧪 Testes_Qualidade_Software/
+│   │   └── 🎨 User_Experience_Digital/
+│   │
+│   └── 📘 FECAP_ADS3_MenuUX.pptx.pdf
 │
-├── 📁 Entrega 2/
-│ ├── 📄 Programação Mobile/
-│ │ └── Integração de funcionalidades e aprimoramento da interface.
-│ │
-│ ├── ⚙️ Sistemas Operacionais e Arquiteturas Cloud Native/
-│ │ └── Deploy e implementação do banco de dados em contêineres.
-│ │
-│ ├── 🧪 Testes e Qualidade de Software (DevOps)/
-│ │ └── Implementação de testes unitários, integração e de usuário.
-│ │
-│ └── 🎨 User Experience Digital/
-│ └── Framework HEART detalhado e User Stories (INVEST).
-│
-└── 📘 FECAP_ADS3_MenuUX.pptx.pdf
-└── Apresentação final do projeto, consolidando as quatro disciplinas.
+└── 💻 src/(Contém o código-fonte prático do projeto — dividido também por entrega)
+    ├── Entrega_1/
+    │   ├── Back-End/cantina-backend/
+    │   └── Front-End/ComedoriaTia/
+    │
+    └── Entrega_2/
+        ├── Back-End/
+        └── Front-End/
 ```
 
 📝 Descrição:
@@ -109,20 +125,6 @@ User Experience Digital: design, protótipos, personas, fluxos e justificativas 
 
 O arquivo FECAP_ADS3_MenuUX.pptx.pdf é a apresentação oficial do grupo (provavelmente usada na banca ou PI).
 
-💻 src/
-
-Contém o código-fonte prático do projeto — dividido também por entrega.
-```
-src/
-│
-├── Entrega 1/
-│   ├── Back-End/cantina-backend/
-│   └── Front-End/ComedoriaTia/
-│
-└── Entrega 2/
-    ├── Back-End/
-    └── Front-End/
-```
 
 🧠 Descrição:
 
@@ -131,6 +133,14 @@ Entrega 1: contém o primeiro protótipo funcional — com o backend em uma past
 Entrega 2: representa a nova versão (melhorada e atualizada) do sistema, mantendo a separação entre back-end e front-end.
 
 ## 📋 Licença/License
+<div align="center">
 <a href="https://github.com/2025-2-NADS3/Projeto5">Comedoria da Tia</a> © 2025 by <a href="https://github.com/2025-2-NADS3/Projeto5"> [Eriane Dias](#), [Kauã Daniel](#), [Nathan Lucena](#), [Vitor Melo](#)</a> is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;">
+</div>
 
 ## 🎓 Referências
+
+
+Norma ISO/IEC 25010 - Qualidade de Produto de Software
+Framework HEART para métricas de UX
+Metodologia INVEST para User Stories
+Princípios de Cloud Native Architecture
