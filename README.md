@@ -80,7 +80,8 @@ contratempos.</h3>
 | ✅ **Desenvolvimento Ágil** | Iterações rápidas baseadas em feedback dos usuários |
 
 </div>
-📊 Arquitetura do Sistema
+##📊 Arquitetura do Sistema
+```markdown
 
 ```mermaid
 graph TB
@@ -99,13 +100,7 @@ graph TB
     style F fill:#F24E1E
     style G fill:#3DDC84
     ```
-🎯 Destaques da Stack:
 
-🏗️ Desenvolvimento Nativo - Máxima performance e integração com Android
-🔄 Sincronização em Tempo Real - Dados sempre atualizados via Firebase
-🎨 UX/UI Profissional - Design criado no Figma seguindo best practices
-🔒 Segurança - Autenticação robusta com Firebase Auth
-📈 Escalabilidade - Infraestrutura cloud preparada para crescimento---
 
 ## 🛠 Estrutura de Pasta
 
