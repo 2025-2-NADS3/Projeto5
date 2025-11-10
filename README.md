@@ -81,7 +81,6 @@ contratempos.</h3>
 
 </div>
 ##📊 Arquitetura do Sistema
-```markdown
 
 ```mermaid
 graph TB
