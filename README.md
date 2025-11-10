@@ -80,7 +80,7 @@ contratempos.</h3>
 | ✅ **Desenvolvimento Ágil** | Iterações rápidas baseadas em feedback dos usuários |
 
 </div>
-##📊 Arquitetura do Sistema
+## 📊 Arquitetura do Sistema
 
 ```mermaid
 graph TB
