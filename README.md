@@ -82,7 +82,8 @@ contratempos.</h3>
 </div>
 ## 📊 Arquitetura do Sistema
 
-```mermaid
+**```mermaid
+
 graph TB
     A[📱 Aplicativo Android] --> B[🔥 Firebase]
     B --> C[☁️ Google Cloud]
@@ -97,8 +98,9 @@ graph TB
     style D fill:#FFCA28
     style E fill:#FFCA28
     style F fill:#F24E1E
-    style G fill:#3DDC84
-    ```
+    style G fill:#3DDC84**
+
+   
 
 
 ### 🛠 Estrutura de Pasta
