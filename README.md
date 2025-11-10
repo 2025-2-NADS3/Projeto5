@@ -30,14 +30,15 @@
 
 ### 🎯 Objetivos
 <h3>
-O Comedoria da Tia é um aplicativo mobile desenvolvido para revolucionar a experiência de compra na cantina da FECAP. Atualmente, os estudantes enfrentam longas filas durante os intervalos, gerando atrasos e transtornos.
+O Comedoria da Tia é um aplicativo mobile desenvolvido para revolucionar a experiência de compra na cantina da FECAP. 
+  Atualmente, os estudantes enfrentam longas filas durante os intervalos, gerando atrasos e transtornos.</h3>
 
 Com nossa solução, os usuários podem:
 
 ✅ Realizar pedidos antecipados
 ✅ Reservar e garantir seus lanches
 ✅ Evitar filas e aglomerações
-✅ Desfrutar de maior comodidade</h3>
+✅ Desfrutar de maior comodidade
 
 ### 🌍 Impacto Esperado
 <h3>Além de beneficiar os usuários, o sistema contribuirá para uma melhor gestão da
@@ -54,24 +55,24 @@ contratempos.</h3>
 📱 Frontend Mobile
 
 <img src="https://img.shields.io/badge/React_Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB"/>
-https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white
-https://img.shields.io/badge/Expo-1B1F23?style=for-the-badge&logo=expo&logoColor=white
+<img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white"/>
+<img src="https://img.shields.io/badge/Expo-1B1F23?style=for-the-badge&logo=expo&logoColor=white"/>
 
 🚀 Backend & Infraestrutura
 
-https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white
-https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white
-https://img.shields.io/badge/Cloud_Native-FF6F00?style=for-the-badge&logo=kubernetes&logoColor=white
+<img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white"/>
+<img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white"/>
+<img src="https://img.shields.io/badge/Cloud_Native-FF6F00?style=for-the-badge&logo=kubernetes&logoColor=white"/>
 
 🧪 Qualidade & Testes
 
-https://img.shields.io/badge/Jest-C21325?style=for-the-badge&logo=jest&logoColor=white
-https://img.shields.io/badge/DevOps-0078D7?style=for-the-badge&logo=azure-devops&logoColor=white
+<img src="https://img.shields.io/badge/Jest-C21325?style=for-the-badge&logo=jest&logoColor=white"/>
+<img src="https://img.shields.io/badge/DevOps-0078D7?style=for-the-badge&logo=azure-devops&logoColor=white"/>
 
 🎨 Design & UX
 
-https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white
-https://img.shields.io/badge/Adobe_XD-FF61F6?style=for-the-badge&logo=adobexd&logoColor=white
+<img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white"/>
+<img src="https://img.shields.io/badge/Adobe_XD-FF61F6?style=for-the-badge&logo=adobexd&logoColor=white"/>
 
 ---
 
