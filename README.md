@@ -54,26 +54,52 @@ contratempos.</h3>
 
 📱 Frontend Mobile
 
-<img src="https://img.shields.io/badge/React_Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB"/>
-<img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white"/>
-<img src="https://img.shields.io/badge/Expo-1B1F23?style=for-the-badge&logo=expo&logoColor=white"/>
+<img src="https://img.shields.io/badge/Android_Studio-3DDC84?style=for-the-badge&logo=android-studio&logoColor=white"/> <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white"/> <img src="https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white"/>
+🔥 Backend & Banco de Dados
 
-🚀 Backend & Infraestrutura
-
-<img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white"/>
-<img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white"/>
-<img src="https://img.shields.io/badge/Cloud_Native-FF6F00?style=for-the-badge&logo=kubernetes&logoColor=white"/>
-
-🧪 Qualidade & Testes
-
-<img src="https://img.shields.io/badge/Jest-C21325?style=for-the-badge&logo=jest&logoColor=white"/>
-<img src="https://img.shields.io/badge/DevOps-0078D7?style=for-the-badge&logo=azure-devops&logoColor=white"/>
-
+<img src="https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black"/> <img src="https://img.shields.io/badge/Google_Cloud-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white"/>
 🎨 Design & UX
 
-<img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white"/>
-<img src="https://img.shields.io/badge/Adobe_XD-FF61F6?style=for-the-badge&logo=adobexd&logoColor=white"/>
+<img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white"/> <img src="https://img.shields.io/badge/Adobe_XD-FF61F6?style=for-the-badge&logo=adobexd&logoColor=white"/>
+📦 Versionamento & Gestão
 
+<img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"/> <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white"/>
+Ou se preferir uma versão mais detalhada com descrições:
+
+🛠 Stack Tecnológica
+
+📱 Desenvolvimento Mobile
+
+Tecnologia	Descrição
+Android Studio	IDE oficial para desenvolvimento Android
+Java	Linguagem de programação principal
+Android SDK	Framework para aplicações móveis nativas
+🔥 Backend & Dados
+
+Tecnologia	Descrição
+Firebase	Plataforma BaaS (Backend as a Service)
+Firestore	Banco de dados NoSQL em tempo real
+Firebase Auth	Sistema de autenticação de usuários
+Google Cloud	Infraestrutura cloud para escalabilidade
+🎨 Design & Experiência
+
+Tecnologia	Descrição
+Figma	Prototipagem e design de interface
+Adobe XD	Design de experiência do usuário
+Material Design	Guidelines de design para Android
+🔧 Ferramentas de Desenvolvimento
+
+Tecnologia	Descrição
+Git	Controle de versão
+GitHub	Hospedagem e colaboração no código
+Android Emulator	Teste e depuração da aplicação
+Principais Características Técnicas:
+
+✅ Aplicação Nativa Android - Melhor performance e acesso a APIs do dispositivo
+✅ Firebase Integration - Sincronização em tempo real e autenticação simplificada
+✅ Design System - Interface consistente seguindo Material Design
+✅ Arquitetura MVC - Separação clara de responsabilidades
+✅ Desenvolvimento Ágil - Iterações rápidas baseadas em feedback dos usuários
 ---
 
 ## 🛠 Estrutura de Pasta
