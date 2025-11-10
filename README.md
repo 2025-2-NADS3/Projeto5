@@ -10,7 +10,11 @@
 ---
 
 # 👥 Integrantes
-<h3> <a href="https://www.linkedin.com/in/oficialvitormelo/">Vitor Melo</a>, <a href="https://www.linkedin.com/in/kau%C3%A3-aguiar-9979742b5/">Kauã Daniel</a>, <a href="https://www.linkedin.com/in/nathanlucena/">Nathan Lucena</a>, <a href="https://www.linkedin.com/in/eriane-dos-santos-oliveira-cfp-pqo-paap-53116292/">Eriane Dias</a>.
+<h3> 
+  <a href="https://www.linkedin.com/in/oficialvitormelo/">Vitor Melo</a>
+  <a href="https://www.linkedin.com/in/kau%C3%A3-aguiar-9979742b5/">Kauã Daniel</a>
+  <a href="https://www.linkedin.com/in/nathanlucena/">Nathan Lucena</a>
+  <a href="https://www.linkedin.com/in/eriane-dos-santos-oliveira-cfp-pqo-paap-53116292/">Eriane Dias</a>.
 </h3>
 
 
@@ -104,7 +108,7 @@ O arquivo FECAP_ADS3_MenuUX.pptx.pdf é a apresentação oficial do grupo (prova
 💻 src/
 
 Contém o código-fonte prático do projeto — dividido também por entrega.
-
+```
 src/
 │
 ├── Entrega 1/
@@ -114,7 +118,7 @@ src/
 └── Entrega 2/
     ├── Back-End/
     └── Front-End/
-
+```
 
 🧠 Descrição:
 
