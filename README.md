@@ -21,7 +21,9 @@
 
 
 # 👨‍🏫 Orientadores
-<h3><a href="https://www.linkedin.com/in/victorbarq/?originalSubdomain=br">Victor Rosetti</a></h3>
+
+
+<h3><a Professor Orientador: </a> <a href="https://www.linkedin.com/in/victorbarq/?originalSubdomain=br">Dr. Victor Rosetti de Quiroz</a></h3>
 
 
 # 🧠 Sobre o Projeto
