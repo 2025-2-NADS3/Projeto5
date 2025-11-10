@@ -35,7 +35,7 @@ O Comedoria da Tia é um aplicativo mobile desenvolvido para revolucionar a expe
 
 Com nossa solução, os usuários podem:
 
-<div align="center">
+<div >
 
 📱 **✅ Realizar pedidos antecipados**  
 🛒 **✅ Reservar e garantir seus lanches**  
@@ -100,7 +100,7 @@ graph TB
     style F fill:#F24E1E
     style G fill:#3DDC84
 
-   ´´´
+   ```
 
 
 ### 🛠 Estrutura de Pasta
