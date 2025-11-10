@@ -10,12 +10,14 @@
 ---
 
 # 👥 Integrantes
-<h3> 
-  <a href="https://www.linkedin.com/in/oficialvitormelo/">Vitor Melo</a>
-  <a href="https://www.linkedin.com/in/kau%C3%A3-aguiar-9979742b5/">Kauã Daniel</a>
-  <a href="https://www.linkedin.com/in/nathanlucena/">Nathan Lucena</a>
-  <a href="https://www.linkedin.com/in/eriane-dos-santos-oliveira-cfp-pqo-paap-53116292/">Eriane Dias</a>.
+
+<h3>
+  <a href="https://www.linkedin.com/in/oficialvitormelo/">Vitor Melo</a> •
+  <a href="https://www.linkedin.com/in/kau%C3%A3-aguiar-9979742b5/">Kauã Daniel</a> •
+  <a href="https://www.linkedin.com/in/nathanlucena/">Nathan Lucena</a> •
+  <a href="https://www.linkedin.com/in/eriane-dos-santos-oliveira-cfp-pqo-paap-53116292/">Eriane Dias</a>
 </h3>
+
 
 
 # 👨‍🏫 Orientadores
