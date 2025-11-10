@@ -101,7 +101,7 @@ graph TB
     ```
 
 
-## 🛠 Estrutura de Pasta
+### 🛠 Estrutura de Pasta
 
 📁 Estrutura de Pastas — Projeto Comedoria da Tia (MenuUX / FECAP)
 🗂 Documentos/
