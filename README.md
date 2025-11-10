@@ -52,7 +52,7 @@ contratempos.</h3>
 🗂 Documentos/
 
 Pasta principal para entregas teóricas e relatórios acadêmicos.
-
+```
 Documentos/
 │
 ├── 📁 Entrega 1/
@@ -83,6 +83,7 @@ Documentos/
 │
 └── 📘 FECAP_ADS3_MenuUX.pptx.pdf
 └── Apresentação final do projeto, consolidando as quatro disciplinas.
+```
 
 📝 Descrição:
 
