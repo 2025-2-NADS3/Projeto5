@@ -35,10 +35,14 @@ O Comedoria da Tia é um aplicativo mobile desenvolvido para revolucionar a expe
 
 Com nossa solução, os usuários podem:
 
-✅ Realizar pedidos antecipados
-✅ Reservar e garantir seus lanches
-✅ Evitar filas e aglomerações
-✅ Desfrutar de maior comodidade
+<div align="center">
+
+📱 **✅ Realizar pedidos antecipados**  
+🛒 **✅ Reservar e garantir seus lanches**  
+⏱️ **✅ Evitar filas e aglomerações**  
+😊 **✅ Desfrutar de maior comodidade**
+
+</div>
 
 ### 🌍 Impacto Esperado
 <h3>Além de beneficiar os usuários, o sistema contribuirá para uma melhor gestão da
@@ -64,47 +68,21 @@ contratempos.</h3>
 📦 Versionamento & Gestão
 
 <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"/> <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white"/>
-Ou se preferir uma versão mais detalhada com descrições:
-
-🛠 Stack Tecnológica
-
-📱 Desenvolvimento Mobile
-
-🛠️ Tecnologia	📋 Descrição
-<img src="https://img.shields.io/badge/Android_Studio-3DDC84?style=flat-square&logo=android-studio&logoColor=white"/>	IDE oficial para desenvolvimento Android
-<img src="https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white"/>	Linguagem de programação principal
-<img src="https://img.shields.io/badge/Android_SDK-3DDC84?style=flat-square&logo=android&logoColor=white"/>	Framework para aplicações móveis nativas
-🔥 Backend & Dados
-
-🗃️ Tecnologia	📋 Descrição
-<img src="https://img.shields.io/badge/Firebase-FFCA28?style=flat-square&logo=firebase&logoColor=black"/>	Plataforma BaaS (Backend as a Service)
-<img src="https://img.shields.io/badge/Firestore-FFCA28?style=flat-square&logo=firebase&logoColor=black"/>	Banco de dados NoSQL em tempo real
-<img src="https://img.shields.io/badge/Firebase_Auth-FFCA28?style=flat-square&logo=firebase&logoColor=black"/>	Sistema de autenticação de usuários
-<img src="https://img.shields.io/badge/Google_Cloud-4285F4?style=flat-square&logo=google-cloud&logoColor=white"/>	Infraestrutura cloud para escalabilidade
-🎨 Design & Experiência
-
-🎨 Tecnologia	📋 Descrição
-<img src="https://img.shields.io/badge/Figma-F24E1E?style=flat-square&logo=figma&logoColor=white"/>	Prototipagem e design de interface
-<img src="https://img.shields.io/badge/Adobe_XD-FF61F6?style=flat-square&logo=adobexd&logoColor=white"/>	Design de experiência do usuário
-<img src="https://img.shields.io/badge/Material_Design-757575?style=flat-square&logo=material-design&logoColor=white"/>	Guidelines de design para Android
-🔧 Ferramentas de Desenvolvimento
-
-⚙️ Tecnologia	📋 Descrição
-<img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white"/>	Controle de versão
-<img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white"/>	Hospedagem e colaboração no código
-<img src="https://img.shields.io/badge/Android_Emulator-3DDC84?style=flat-square&logo=android&logoColor=white"/>	Teste e depuração da aplicação
-✨ Características Técnicas
 
 <div align="center">
-🚀 Funcionalidade	💡 Benefício
-✅ Aplicação Nativa Android	Melhor performance e acesso a APIs do dispositivo
-✅ Firebase Integration	Sincronização em tempo real e autenticação simplificada
-✅ Design System	Interface consistente seguindo Material Design
-✅ Arquitetura MVC	Separação clara de responsabilidades
-✅ Desenvolvimento Ágil	Iterações rápidas baseadas em feedback dos usuários
+
+| 🚀 Funcionalidade | 💡 Benefício |
+|-------------------|--------------|
+| ✅ **Aplicação Nativa Android** | Melhor performance e acesso a APIs do dispositivo |
+| ✅ **Firebase Integration** | Sincronização em tempo real e autenticação simplificada |
+| ✅ **Design System** | Interface consistente seguindo Material Design |
+| ✅ **Arquitetura MVC** | Separação clara de responsabilidades |
+| ✅ **Desenvolvimento Ágil** | Iterações rápidas baseadas em feedback dos usuários |
+
 </div>
 📊 Arquitetura do Sistema
 
+```mermaid
 graph TB
     A[📱 Aplicativo Android] --> B[🔥 Firebase]
     B --> C[☁️ Google Cloud]
@@ -112,6 +90,15 @@ graph TB
     B --> E[🔐 Firebase Auth]
     F[🎨 Figma] --> A
     G[⚙️ Android Studio] --> A
+    
+    style A fill:#3DDC84
+    style B fill:#FFCA28
+    style C fill:#4285F4
+    style D fill:#FFCA28
+    style E fill:#FFCA28
+    style F fill:#F24E1E
+    style G fill:#3DDC84
+    ```
 🎯 Destaques da Stack:
 
 🏗️ Desenvolvimento Nativo - Máxima performance e integração com Android
