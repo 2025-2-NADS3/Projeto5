@@ -55,20 +55,34 @@ Pasta principal para entregas teóricas e relatórios acadêmicos.
 
 Documentos/
 │
-├── Entrega 1/
-│   ├── Programação Mobile/
-│   ├── Sistemas Operacionais e Arquiteturas Cloud Native/
-│   ├── Testes e Qualidade de Software (DevOps)/
-│   └── User Experience Digital/
+├── 📁 Entrega 1/
+│ ├── 📄 Programação Mobile/
+│ │ └── Implementação inicial do aplicativo e telas base.
+│ │
+│ ├── ⚙️ Sistemas Operacionais e Arquiteturas Cloud Native/
+│ │ └── Estrutura de servidores, contêineres e configuração do backend.
+│ │
+│ ├── 🧪 Testes e Qualidade de Software (DevOps)/
+│ │ └── Aplicação da norma ISO/IEC 25010, plano de qualidade e testes.
+│ │
+│ └── 🎨 User Experience Digital/
+│ └── Mockups iniciais e aplicação do framework HEART.
 │
-├── Entrega 2/
-│   ├── Programação Mobile/
-│   ├── Sistemas Operacionais e Arquiteturas Cloud Native/
-│   ├── Testes e Qualidade de Software (DevOps)/
-│   └── User Experience Digital/
+├── 📁 Entrega 2/
+│ ├── 📄 Programação Mobile/
+│ │ └── Integração de funcionalidades e aprimoramento da interface.
+│ │
+│ ├── ⚙️ Sistemas Operacionais e Arquiteturas Cloud Native/
+│ │ └── Deploy e implementação do banco de dados em contêineres.
+│ │
+│ ├── 🧪 Testes e Qualidade de Software (DevOps)/
+│ │ └── Implementação de testes unitários, integração e de usuário.
+│ │
+│ └── 🎨 User Experience Digital/
+│ └── Framework HEART detalhado e User Stories (INVEST).
 │
-└── FECAP_ADS3_MenuUX.pptx.pdf
-
+└── 📘 FECAP_ADS3_MenuUX.pptx.pdf
+└── Apresentação final do projeto, consolidando as quatro disciplinas.
 
 📝 Descrição:
 
