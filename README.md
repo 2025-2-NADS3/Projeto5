@@ -35,7 +35,7 @@ O Comedoria da Tia é um aplicativo mobile desenvolvido para revolucionar a expe
 
 Com nossa solução, os usuários podem:
 
-<div >
+<div style="text-align: left;">
 
 📱 **✅ Realizar pedidos antecipados**  
 🛒 **✅ Reservar e garantir seus lanches**  
@@ -58,16 +58,17 @@ contratempos.</h3>
 
 📱 Frontend Mobile
 
-<img src="https://img.shields.io/badge/Android_Studio-3DDC84?style=for-the-badge&logo=android-studio&logoColor=white"/> <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white"/> <img src="https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white"/>
-🔥 Backend & Banco de Dados
+<img src="https://img.shields.io/badge/Android_Studio-3DDC84?style=for-the-badge&logo=android-studio&logoColor=white"/> <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white"/> 
+🔥 Frontend & Mobile
 
 <img src="https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black"/> <img src="https://img.shields.io/badge/Google_Cloud-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white"/>
-🎨 Design & UX
+🔥 Backend & Banco de Dados
 
 <img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white"/> <img src="https://img.shields.io/badge/Adobe_XD-FF61F6?style=for-the-badge&logo=adobexd&logoColor=white"/>
-📦 Versionamento & Gestão
+🎨 Design & UX
 
-<img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"/> <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white"/>
+<img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"/> 
+📦 Versionamento & Gestão
 
 <div align="center">
 
