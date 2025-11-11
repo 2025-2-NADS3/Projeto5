@@ -1,0 +1,17 @@
+Prezado professor,
+
+
+Agradecemos por seus ensinamentos e pela orientação ao longo do desenvolvimento do projeto.
+
+Em relação à entrega atual, realizamos as implementações solicitadas de CRUD (Create, Read, Update e Delete) no Frontend e no Backend, seguindo o modelo cliente-servidor.
+Na primeira entrega, havíamos atualizado os arquivos dentro da pasta SRC, o que pode ter dificultado a visualização. Nesta nova submissão, reorganizamos toda a estrutura de pastas e reenviamos o conteúdo da entrega 1, garantindo maior clareza e acessibilidade.
+Para atender aos requisitos técnicos, desenvolvemos e testamos o sistema com dois bancos de dados diferentes:
+
+MySQL, utilizando o Visual Studio para implementar e validar as operações de CRUD no ambiente de desenvolvimento local;
+
+Firebase, totalmente integrado ao aplicativo da Comedoria da Tia, permitindo gerenciamento dinâmico de dados, como a atualização das imagens dos alimentos e o controle de usuários com login e senha.
+
+Com essas implementações, o projeto cumpre as exigências das entregas:
+CRUD completo (Frontend e Backend);
+Banco de dados funcional integrado ao servidor;
+Contêiner de dados testado em múltiplas plataformas (MySQL e Firebase).

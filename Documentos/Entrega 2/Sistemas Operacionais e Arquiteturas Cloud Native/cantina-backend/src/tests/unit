@@ -1,0 +1,51 @@
+const { User } = require('../models');
+const authController = require('../controllers/authController');
+
+// Mock do modelo User
+jest.mock('../models', () => ({
+  User: {
+    findOne: jest.fn(),
+    create: jest.fn()
+  }
+}));
+
+describe('Auth Controller', () => {
+  describe('register', () => {
+    it('deve criar um novo usuário com sucesso', async () => {
+      const mockUser = {
+        id: 1,
+        name: 'João Silva',
+        email: 'joao@fecap.br',
+        studentId: '202312345',
+        password: 'hashedpassword'
+      };
+      
+      User.findOne.mockResolvedValue(null);
+      User.create.mockResolvedValue(mockUser);
+      
+      const req = {
+        body: {
+          name: 'João Silva',
+          email: 'joao@fecap.br',
+          password: 'senha123',
+          studentId: '202312345',
+          phone: '11999999999'
+        }
+      };
+      
+      const res = {
+        status: jest.fn().mockReturnThis(),
+        json: jest.fn()
+      };
+      
+      await authController.register(req, res);
+      
+      expect(res.status).toHaveBeenCalledWith(201);
+      expect(res.json).toHaveBeenCalledWith(
+        expect.objectContaining({
+          message: 'Usuário criado com sucesso'
+        })
+      );
+    });
+  });
+});
