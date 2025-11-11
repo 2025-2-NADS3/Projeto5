@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="best_deal_c">185dp</dimen>
+    <dimen name="best_deal_height">220dp</dimen>
+</resources>
