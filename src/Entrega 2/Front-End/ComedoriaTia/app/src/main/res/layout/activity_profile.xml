@@ -226,8 +226,7 @@
                     <ImageView
                         android:layout_width="24dp"
                         android:layout_height="24dp"
-                        android:src="@drawable/btn_5"
-                        app:tint="@color/white" />
+                        android:src="@drawable/ic_config" />
 
                     <TextView
                         android:layout_width="0dp"

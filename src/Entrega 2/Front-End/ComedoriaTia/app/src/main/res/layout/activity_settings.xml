@@ -28,7 +28,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/back"
+            app:srcCompat="@drawable/ic_back"
             app:tint="@color/green1" />
 
         <TextView
@@ -88,8 +88,7 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/back"
-                    android:rotation="180"
+                    app:srcCompat="@drawable/ic_security"
                     app:tint="@color/green1" />
 
             </LinearLayout>
@@ -117,7 +116,7 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/back"
+                    app:srcCompat="@drawable/ic_term"
                     android:rotation="180"
                     app:tint="@color/green1" />
 

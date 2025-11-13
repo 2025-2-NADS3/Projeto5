@@ -150,7 +150,7 @@ public class AccountDataActivity extends AppCompatActivity {
                             if (!email.equals(currentUser.getEmail())) {
                                 currentUser.updateEmail(email);
                             }
-                            Toast.makeText(AccountDataActivity.this, "User data updated successfully.", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(AccountDataActivity.this, "Dados alterados com sucesso!", Toast.LENGTH_SHORT).show();
                         } else {
                             Toast.makeText(AccountDataActivity.this, "Failed to update user data.", Toast.LENGTH_SHORT).show();
                         }

@@ -8,6 +8,17 @@
     android:background="@color/white1"
     tools:context=".Activity.AdminProductDetailActivity">
 
+    <ImageView
+        android:id="@+id/top_background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:scaleType="fitStart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/top_background" />
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -21,12 +32,6 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-
-                <ImageView
-                    android:id="@+id/top_background"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/top_grey_background" />
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/header"
@@ -44,7 +49,8 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:srcCompat="@drawable/back" />
+                        app:srcCompat="@drawable/ic_back"
+                        android:tint="@color/white"/>
 
                     <TextView
                         android:id="@+id/header_title"
@@ -109,7 +115,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android.layout_marginTop="16dp"
+                    android:layout_marginTop="16dp"
                     android:text="Preço"
                     android:textColor="@color/green1"
                     android:textStyle="bold"/>

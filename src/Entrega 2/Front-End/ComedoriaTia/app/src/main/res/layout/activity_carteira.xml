@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white1"
-    tools:context=".Activity.WalletActivity">
+    tools:context=".Activity.CarteiraActivity">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -56,7 +56,7 @@
                 android:layout_marginStart="24dp"
                 android:layout_marginEnd="24dp"
                 android:layout_marginBottom="24dp"
-                android:background="@drawable/layout_search"
+                android:background="@drawable/yellow_bg"
                 android:padding="24dp">
 
                 <TextView
@@ -64,7 +64,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Saldo"
-                    android:textColor="@color/green1"
+                    android:textColor="@color/white"
                     android:textSize="16sp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -74,7 +74,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="R$ 0,00"
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     android:textSize="24sp"
                     android:textStyle="bold"
                     app:layout_constraintStart_toStartOf="parent"
@@ -92,7 +92,7 @@
                         android:layout_width="80dp"
                         android:layout_height="36dp"
                         android:layout_marginEnd="12dp"
-                        android:background="@drawable/yellow_bg"
+                        android:background="@drawable/green_bg"
                         android:padding="8dp">
 
                         <TextView
@@ -149,7 +149,7 @@
                 android:layout_marginStart="24dp"
                 android:layout_marginEnd="24dp"
                 android:layout_marginBottom="16dp"
-                android:background="@drawable/layout_search"
+                android:background="@drawable/yellow_bg"
                 android:padding="16dp">
 
                 <ImageView
@@ -157,7 +157,7 @@
                     android:layout_width="24dp"
                     android:layout_height="24dp"
                     android:src="@drawable/card"
-                    android:tint="@color/green1"
+                    android:tint="@color/white"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent" />
@@ -176,14 +176,14 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Cartão"
-                        android:textColor="@color/black"
+                        android:textColor="@color/white"
                         android:textSize="16sp"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Novo Cartão"
-                        android:textColor="@color/black4"
+                        android:textColor="@color/white"
                         android:textSize="14sp"/>
                 </LinearLayout>
 
@@ -192,7 +192,7 @@
                     android:layout_width="16dp"
                     android:layout_height="16dp"
                     android:src="@drawable/setadireita"
-                    android:tint="@color/green1"
+                    android:tint="@color/white"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent" />
@@ -206,7 +206,7 @@
                 android:layout_marginStart="24dp"
                 android:layout_marginEnd="24dp"
                 android:layout_marginBottom="32dp"
-                android:background="@drawable/layout_search"
+                android:background="@drawable/yellow_bg"
                 android:padding="16dp">
 
                 <ImageView
@@ -214,7 +214,7 @@
                     android:layout_width="20dp"
                     android:layout_height="20dp"
                     android:src="@drawable/add"
-                    android:tint="@color/green1"
+                    android:tint="@color/white"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent" />
@@ -224,7 +224,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:text="Adicionar novo cartão"
-                    android:textColor="@color/green1"
+                    android:textColor="@color/white"
                     android:textSize="16sp"
                     app:layout_constraintStart_toEndOf="@+id/imageViewAdd"
                     app:layout_constraintTop_toTopOf="parent"
@@ -250,7 +250,7 @@
                 android:layout_marginStart="24dp"
                 android:layout_marginEnd="24dp"
                 android:layout_marginBottom="8dp"
-                android:background="@drawable/layout_search"
+                android:background="@drawable/yellow_bg"
                 android:padding="16dp">
 
                 <TextView
@@ -268,7 +268,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="R$ 35,00"
-                    android:textColor="@color/green1"
+                    android:textColor="@color/white"
                     android:textSize="16sp"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -279,7 +279,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Pago"
-                    android:textColor="@color/green1"
+                    android:textColor="@color/white"
                     android:textSize="12sp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textViewTransacao1" />
@@ -293,7 +293,7 @@
                 android:layout_marginStart="24dp"
                 android:layout_marginEnd="24dp"
                 android:layout_marginBottom="8dp"
-                android:background="@drawable/layout_search"
+                android:background="@drawable/yellow_bg"
                 android:padding="16dp">
 
                 <TextView
@@ -311,7 +311,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="R$ 24,80"
-                    android:textColor="@color/green1"
+                    android:textColor="@color/white"
                     android:textSize="16sp"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -322,7 +322,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Pago"
-                    android:textColor="@color/green1"
+                    android:textColor="@color/white"
                     android:textSize="12sp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textViewTransacao2" />

@@ -22,7 +22,8 @@
             android:id="@+id/backBtn"
             android:layout_width="32dp"
             android:layout_height="32dp"
-            android:src="@drawable/back"
+            android:src="@drawable/ic_back"
+            android:tint="@color/green1"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 

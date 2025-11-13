@@ -85,7 +85,7 @@ public class DetailActivity extends BaseActivity {
 
         binding.plusBtn.setOnClickListener(v -> {
             weight = weight + 1;
-            binding.weightTxt.setText(weight + "kg");
+            binding.weightTxt.setText(weight + "und");
             binding.totaltxt.setText("R$" + (weight * object.getPrice()));
         });
 

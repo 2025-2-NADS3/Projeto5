@@ -95,7 +95,7 @@ public class ProfileActivity extends AppCompatActivity {
     }
 
     public void openAccountData(View view) {
-        startActivity(new Intent(ProfileActivity.this, accountdata_Activity.class));
+        startActivity(new Intent(ProfileActivity.this, AccountDataActivity.class));
     }
 
     public void openSettings(View view) {
