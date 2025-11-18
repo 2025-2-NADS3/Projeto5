@@ -35,7 +35,7 @@ import br.com.menuux.comedoriadatia.Adapter.BestDealAdapter;
 import br.com.menuux.comedoriadatia.Adapter.CategoryAdapter;
 import br.com.menuux.comedoriadatia.Domain.BannerDomain;
 import br.com.menuux.comedoriadatia.Domain.CategoryDomain;
-import br.com.menuux.comedoriadatia.Domain.ItemDomain;
+import br.com.menuux.comedoriadatia.Domain.Product;
 import br.com.menuux.comedoriadatia.R;
 import br.com.menuux.comedoriadatia.databinding.ActivityMainBinding;
 
@@ -43,7 +43,7 @@ public class MainActivity extends BaseActivity {
     ActivityMainBinding binding;
     private FirebaseDatabase database;
     private FirebaseAuth mAuth;
-    private ArrayList<ItemDomain> allProducts = new ArrayList<>();
+    private ArrayList<Product> allProducts = new ArrayList<>();
     private final Handler sliderHandler = new Handler(Looper.getMainLooper());
     private Runnable sliderRunnable;
     private ValueAnimator progressAnimator;
@@ -233,7 +233,7 @@ public class MainActivity extends BaseActivity {
                 if (snapshot.exists()) {
                     allProducts.clear();
                     for (DataSnapshot issue : snapshot.getChildren()) {
-                        allProducts.add(issue.getValue(ItemDomain.class));
+                        allProducts.add(issue.getValue(Product.class));
                     }
                     if (!allProducts.isEmpty()) {
                         binding.bestDealView.setLayoutManager(new GridLayoutManager(MainActivity.this, 2));
@@ -264,15 +264,23 @@ public class MainActivity extends BaseActivity {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if (snapshot.exists()) {
                     for (DataSnapshot issue : snapshot.getChildren()) {
-                        list.add(issue.getValue(CategoryDomain.class));
+                        CategoryDomain category = issue.getValue(CategoryDomain.class);
+                        if (category != null) {
+                            try {
+                                category.setId(Integer.parseInt(issue.getKey()));
+                            } catch (NumberFormatException e) {
+                                // Handle the case where the key is not a valid integer
+                            }
+                            list.add(category);
+                        }
                     }
                     if (!list.isEmpty()) {
                         binding.catView.setLayoutManager(new LinearLayoutManager(MainActivity.this, LinearLayoutManager.HORIZONTAL, false));
                         CategoryAdapter adapter = new CategoryAdapter(list);
                         binding.catView.setAdapter(adapter);
                         adapter.setOnItemClickListener((position, category) -> {
-                            ArrayList<ItemDomain> filteredList = new ArrayList<>();
-                            for (ItemDomain item : allProducts) {
+                            ArrayList<Product> filteredList = new ArrayList<>();
+                            for (Product item : allProducts) {
                                 if (item.getCategoryId() == category.getId()) {
                                     filteredList.add(item);
                                 }

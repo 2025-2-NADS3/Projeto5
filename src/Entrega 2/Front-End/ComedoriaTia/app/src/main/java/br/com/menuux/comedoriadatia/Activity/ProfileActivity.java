@@ -17,13 +17,12 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import br.com.menuux.comedoriadatia.Domain.User;
-import br.com.menuux.comedoriadatia.R;
 import br.com.menuux.comedoriadatia.databinding.ActivityProfileBinding;
 
 public class ProfileActivity extends AppCompatActivity {
     private ActivityProfileBinding binding;
     private FirebaseAuth mAuth;
-    private FirebaseDatabase database;
+    private DatabaseReference userRef;
     private static final String TAG = "ProfileActivity";
 
     @Override
@@ -33,7 +32,8 @@ public class ProfileActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         mAuth = FirebaseAuth.getInstance();
-        database = FirebaseDatabase.getInstance();
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        userRef = database.getReference("usuarios");
 
         loadUserProfile();
     }
@@ -42,33 +42,37 @@ public class ProfileActivity extends AppCompatActivity {
         FirebaseUser currentUser = mAuth.getCurrentUser();
         if (currentUser != null) {
             String userId = currentUser.getUid();
-            DatabaseReference userRef = database.getReference("Users").child(userId);
-
-            userRef.addListenerForSingleValueEvent(new ValueEventListener() {
+            userRef.child(userId).addListenerForSingleValueEvent(new ValueEventListener() {
                 @Override
-                public void onDataChange(@NonNull DataSnapshot snapshot) {
-                    if (snapshot.exists()) {
-                        Log.d(TAG, "DataSnapshot exists for user: " + userId);
-                        User user = snapshot.getValue(User.class);
-                        if (user != null && user.getNome() != null && user.getSobrenome() != null) {
-                            String fullName = user.getNome() + " " + user.getSobrenome();
-                            binding.userNameText.setText(fullName);
-                            Log.d(TAG, "User name set to: " + fullName);
-                        } else {
-                            Log.w(TAG, "User object is null or fields are missing.");
-                            // Fallback para o DisplayName se não houver dados no banco
-                            if (currentUser.getDisplayName() != null && !currentUser.getDisplayName().isEmpty()) {
-                                binding.userNameText.setText(currentUser.getDisplayName());
+                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                    if (dataSnapshot.exists()) {
+                        User user = dataSnapshot.getValue(User.class);
+                        if (user != null) {
+                            String nome = user.getNome() != null ? user.getNome() : "";
+                            String sobrenome = user.getSobrenome() != null ? user.getSobrenome() : "";
+                            String fullName = (nome + " " + sobrenome).trim();
+
+                            if (!fullName.isEmpty()) {
+                                binding.userNameText.setText(fullName);
+                                Log.d(TAG, "User name set to: " + fullName);
+                            } else {
+                                binding.userNameText.setText("Usuário");
+                                Log.d(TAG, "User full name is empty. Setting to default.");
                             }
+                        } else {
+                             Log.w(TAG, "User object is null.");
+                             binding.userNameText.setText("Usuário"); // Default text
                         }
                     } else {
-                        Log.w(TAG, "DataSnapshot does not exist for user: " + userId);
+                        Log.w(TAG, "No data found for user: " + userId);
+                        binding.userNameText.setText("Usuário"); // Default text
                     }
                 }
 
                 @Override
-                public void onCancelled(@NonNull DatabaseError error) {
-                    Log.e(TAG, "Database error: " + error.getMessage());
+                public void onCancelled(@NonNull DatabaseError databaseError) {
+                    Log.e(TAG, "Error fetching user data from Realtime Database", databaseError.toException());
+                    binding.userNameText.setText("Usuário"); // Default text on error
                 }
             });
         }

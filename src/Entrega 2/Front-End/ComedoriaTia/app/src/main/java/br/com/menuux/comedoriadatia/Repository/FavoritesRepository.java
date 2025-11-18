@@ -4,7 +4,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import br.com.menuux.comedoriadatia.Domain.ItemDomain;
+import br.com.menuux.comedoriadatia.Domain.Product;
 
 public class FavoritesRepository {
     private final FirebaseAuth mAuth;
@@ -19,7 +19,7 @@ public class FavoritesRepository {
         return key.replace(".", "").replace("$", "").replace("#", "").replace("[", "").replace("]", "").replace("/", "");
     }
 
-    public void addToFavorites(ItemDomain item, OnCompleteListener<Void> onCompleteListener) {
+    public void addToFavorites(Product item, OnCompleteListener<Void> onCompleteListener) {
         if (mAuth.getCurrentUser() == null) {
             return;
         }
@@ -31,7 +31,7 @@ public class FavoritesRepository {
         favoritesRef.child(itemKey).setValue(item).addOnCompleteListener(onCompleteListener);
     }
 
-    public void removeFromFavorites(ItemDomain item, OnCompleteListener<Void> onCompleteListener) {
+    public void removeFromFavorites(Product item, OnCompleteListener<Void> onCompleteListener) {
         if (mAuth.getCurrentUser() == null) {
             return;
         }

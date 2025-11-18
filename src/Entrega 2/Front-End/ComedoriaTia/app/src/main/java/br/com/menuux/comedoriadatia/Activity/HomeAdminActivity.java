@@ -36,5 +36,13 @@ public class HomeAdminActivity extends AppCompatActivity {
         findViewById(R.id.cardProducts).setOnClickListener(v -> {
             startActivity(new Intent(HomeAdminActivity.this, ProductsActivity.class));
         });
+
+        findViewById(R.id.cardbanner).setOnClickListener(v -> {
+            startActivity(new Intent(HomeAdminActivity.this, BannersAndCategoriesActivity.class));
+        });
+
+        findViewById(R.id.cardAcesso).setOnClickListener(v -> {
+            startActivity(new Intent(HomeAdminActivity.this, AcessoActivity.class));
+        });
     }
 }

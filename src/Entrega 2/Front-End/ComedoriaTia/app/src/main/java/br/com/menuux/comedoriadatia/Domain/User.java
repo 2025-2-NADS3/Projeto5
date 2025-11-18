@@ -1,61 +1,81 @@
 package br.com.menuux.comedoriadatia.Domain;
 
+import com.google.firebase.database.IgnoreExtraProperties;
+import com.google.firebase.database.PropertyName;
+
+@IgnoreExtraProperties
 public class User {
+    private String uid;
     private String nome;
     private String sobrenome;
+    private String email;
     private String celular;
     private String cpf;
-    private String email;
+    private String role;
 
     public User() {
-        // Construtor vazio necessário para o Firebase
+        // Construtor vazio para o Firebase
     }
 
-    public User(String nome, String sobrenome, String celular, String cpf, String email) {
-        this.nome = nome;
-        this.sobrenome = sobrenome;
-        this.celular = celular;
-        this.cpf = cpf;
-        this.email = email;
+    // Getters
+    public String getUid() {
+        return uid;
     }
 
+    @PropertyName("Nome")
     public String getNome() {
         return nome;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
+    @PropertyName("Sobrenome")
     public String getSobrenome() {
         return sobrenome;
-    }
-
-    public void setSobrenome(String sobrenome) {
-        this.sobrenome = sobrenome;
-    }
-
-    public String getCelular() {
-        return celular;
-    }
-
-    public void setCelular(String celular) {
-        this.celular = celular;
-    }
-
-    public String getCpf() {
-        return cpf;
-    }
-
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
     }
 
     public String getEmail() {
         return email;
     }
 
+    public String getCelular() {
+        return celular;
+    }
+
+    public String getCpf() {
+        return cpf;
+    }
+
+    public String getRole() {
+        return role;
+    }
+
+    // Setters
+    public void setUid(String uid) {
+        this.uid = uid;
+    }
+
+    @PropertyName("Nome")
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    @PropertyName("Sobrenome")
+    public void setSobrenome(String sobrenome) {
+        this.sobrenome = sobrenome;
+    }
+
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public void setCelular(String celular) {
+        this.celular = celular;
+    }
+
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
     }
 }

@@ -12,11 +12,11 @@ import com.bumptech.glide.Glide;
 import java.util.ArrayList;
 import java.util.List;
 
-import br.com.menuux.comedoriadatia.Domain.ItemDomain;
+import br.com.menuux.comedoriadatia.Domain.Product;
 import br.com.menuux.comedoriadatia.databinding.ViewholderCartBinding;
 
 public class CartAdapter extends RecyclerView.Adapter<CartAdapter.Viewholder> {
-    private ArrayList<ItemDomain> items;
+    private ArrayList<Product> items;
     private Context context;
     private CartListener listener;
 
@@ -25,7 +25,7 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.Viewholder> {
         void onItemRemoved(int position);
     }
 
-    public CartAdapter(ArrayList<ItemDomain> items, CartListener listener) {
+    public CartAdapter(ArrayList<Product> items, CartListener listener) {
         this.items = items;
         this.listener = listener;
     }
@@ -40,12 +40,13 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.Viewholder> {
 
     @Override
     public void onBindViewHolder(@NonNull Viewholder holder, int position) {
-        ItemDomain item = items.get(position);
+        Product item = items.get(position);
 
         holder.binding.titleTxt.setText(item.getTitle());
         holder.binding.priceTxt.setText("R$" + item.getPrice());
-        holder.binding.quantityTxt.setText(String.valueOf(item.getWeight()));
-        holder.binding.totalItemTxt.setText("R$" + (item.getPrice() * item.getWeight()));
+        // Assumindo que a classe Product terá um método getWeight()
+        // holder.binding.quantityTxt.setText(String.valueOf(item.getWeight()));
+        // holder.binding.totalItemTxt.setText("R$" + (item.getPrice() * item.getWeight()));
 
         Glide.with(context)
                 .load(item.getImagePath())
@@ -53,20 +54,22 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.Viewholder> {
 
         holder.binding.plusBtn.setOnClickListener(v -> {
             if (listener != null) {
-                listener.onQuantityChanged(position, item.getWeight() + 1);
+                // Assumindo que a classe Product terá um método getWeight()
+                // listener.onQuantityChanged(position, item.getWeight() + 1);
             }
         });
 
         holder.binding.minusBtn.setOnClickListener(v -> {
-            if (item.getWeight() > 1) {
+            // Assumindo que a classe Product terá um método getWeight()
+            // if (item.getWeight() > 1) {
                 if (listener != null) {
-                    listener.onQuantityChanged(position, item.getWeight() - 1);
+                    // listener.onQuantityChanged(position, item.getWeight() - 1);
                 }
-            } else {
+            // } else {
                 if (listener != null) {
                     listener.onItemRemoved(position);
                 }
-            }
+            // }
         });
     }
 
@@ -75,13 +78,13 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.Viewholder> {
         return items.size();
     }
 
-    public void updateCartItems(List<ItemDomain> newItems) {
+    public void updateCartItems(List<Product> newItems) {
         items.clear();
         items.addAll(newItems);
         notifyDataSetChanged();
     }
 
-    public List<ItemDomain> getCartItems() {
+    public List<Product> getCartItems() {
         return items;
     }
 

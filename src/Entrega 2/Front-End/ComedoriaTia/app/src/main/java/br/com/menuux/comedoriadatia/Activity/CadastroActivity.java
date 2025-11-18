@@ -98,7 +98,8 @@ public class CadastroActivity extends AppCompatActivity {
 
         String userId = user.getUid();
         Map<String, Object> userData = new HashMap<>();
-        userData.put("nome", nome + " " + sobrenome);
+        userData.put("nome", nome);
+        userData.put("sobrenome", sobrenome);
         userData.put("email", email);
         userData.put("celular", celular);
         userData.put("cpf", cpf);

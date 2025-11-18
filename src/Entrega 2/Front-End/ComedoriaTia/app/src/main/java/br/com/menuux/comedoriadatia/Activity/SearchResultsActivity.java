@@ -12,12 +12,12 @@ import com.google.firebase.database.FirebaseDatabase;
 import java.util.ArrayList;
 
 import br.com.menuux.comedoriadatia.Adapter.BestDealAdapter;
-import br.com.menuux.comedoriadatia.Domain.ItemDomain;
+import br.com.menuux.comedoriadatia.Domain.Product;
 import br.com.menuux.comedoriadatia.databinding.ActivitySearchResultsBinding;
 
 public class SearchResultsActivity extends BaseActivity {
     private ActivitySearchResultsBinding binding;
-    private ArrayList<ItemDomain> searchResults;
+    private ArrayList<Product> searchResults;
     private String searchQuery;
     private FirebaseAuth mAuth;
     private FirebaseDatabase database;
@@ -37,7 +37,7 @@ public class SearchResultsActivity extends BaseActivity {
     }
 
     private void getResultsFromIntent() {
-        searchResults = (ArrayList<ItemDomain>) getIntent().getSerializableExtra("searchResults");
+        searchResults = (ArrayList<Product>) getIntent().getSerializableExtra("searchResults");
         searchQuery = getIntent().getStringExtra("searchQuery");
     }
 

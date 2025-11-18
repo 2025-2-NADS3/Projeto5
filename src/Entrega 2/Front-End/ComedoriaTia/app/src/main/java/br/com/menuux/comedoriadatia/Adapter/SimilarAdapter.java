@@ -12,14 +12,14 @@ import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
 
-import br.com.menuux.comedoriadatia.Domain.ItemDomain;
+import br.com.menuux.comedoriadatia.Domain.Product;
 import br.com.menuux.comedoriadatia.databinding.ViewholderSimilarBinding;
 
 public class SimilarAdapter extends RecyclerView.Adapter<SimilarAdapter.Viewholder> {
-    ArrayList<ItemDomain> items;
+    ArrayList<Product> items;
     Context context;
 
-    public SimilarAdapter(ArrayList<ItemDomain> items) {
+    public SimilarAdapter(ArrayList<Product> items) {
         this.items = items;
     }
 

@@ -18,16 +18,16 @@ import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
 
-import br.com.menuux.comedoriadatia.Domain.ItemDomain;
+import br.com.menuux.comedoriadatia.Domain.Product;
 import br.com.menuux.comedoriadatia.R;
 import br.com.menuux.comedoriadatia.Repository.FavoritesRepository;
 
 public class FavoritesAdapter extends RecyclerView.Adapter<FavoritesAdapter.ViewHolder> {
-    private ArrayList<ItemDomain> items;
+    private ArrayList<Product> items;
     private FavoritesRepository favoritesRepository;
     private Context context;
 
-    public FavoritesAdapter(ArrayList<ItemDomain> items, FirebaseAuth mAuth, FirebaseDatabase database) {
+    public FavoritesAdapter(ArrayList<Product> items, FirebaseAuth mAuth, FirebaseDatabase database) {
         this.items = items;
         this.favoritesRepository = new FavoritesRepository(mAuth, database);
     }
@@ -42,7 +42,7 @@ public class FavoritesAdapter extends RecyclerView.Adapter<FavoritesAdapter.View
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        ItemDomain item = items.get(position);
+        Product item = items.get(position);
 
         holder.titleTxt.setText(item.getTitle());
         holder.priceTxt.setText("R$" + item.getPrice());
@@ -58,7 +58,7 @@ public class FavoritesAdapter extends RecyclerView.Adapter<FavoritesAdapter.View
         });
     }
 
-    private void removeFromFavorites(ItemDomain item, int position) {
+    private void removeFromFavorites(Product item, int position) {
         favoritesRepository.removeFromFavorites(item, task -> {
             if (task.isSuccessful()) {
                 items.remove(position);

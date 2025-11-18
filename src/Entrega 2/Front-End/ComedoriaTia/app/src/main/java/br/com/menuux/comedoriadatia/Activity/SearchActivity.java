@@ -17,7 +17,7 @@ import java.util.ArrayList;
 
 import br.com.menuux.comedoriadatia.Adapter.SearchCategoryAdapter;
 import br.com.menuux.comedoriadatia.Domain.CategoryDomain;
-import br.com.menuux.comedoriadatia.Domain.ItemDomain;
+import br.com.menuux.comedoriadatia.Domain.Product;
 import br.com.menuux.comedoriadatia.R;
 import br.com.menuux.comedoriadatia.databinding.ActivitySearchBinding;
 
@@ -55,14 +55,14 @@ public class SearchActivity extends BaseActivity {
 
     private void performSearch(String searchQuery) {
         DatabaseReference itemsRef = database.getReference("Items");
-        ArrayList<ItemDomain> searchResults = new ArrayList<>();
+        ArrayList<Product> searchResults = new ArrayList<>();
 
         itemsRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if (snapshot.exists()) {
                     for (DataSnapshot issue : snapshot.getChildren()) {
-                        ItemDomain item = issue.getValue(ItemDomain.class);
+                        Product item = issue.getValue(Product.class);
                         if (item != null && containsIgnoreCaseAndAccents(item.getTitle(), searchQuery)) {
                             searchResults.add(item);
                         }

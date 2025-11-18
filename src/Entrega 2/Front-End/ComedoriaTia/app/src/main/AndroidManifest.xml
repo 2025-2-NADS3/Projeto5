@@ -12,7 +12,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ComedoriaTia">
         <activity
+            android:name=".Activity.AcessoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.BannersAndCategoriesActivity"
+            android:exported="false" />
+        <activity
             android:name=".Activity.AdminProductDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.AdminEditItemActivity"
             android:exported="false" />
         <activity
             android:name=".Activity.ProductsActivity"

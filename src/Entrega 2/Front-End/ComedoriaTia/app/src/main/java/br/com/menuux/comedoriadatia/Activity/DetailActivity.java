@@ -18,13 +18,13 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 
 import br.com.menuux.comedoriadatia.Adapter.SimilarAdapter;
-import br.com.menuux.comedoriadatia.Domain.ItemDomain;
+import br.com.menuux.comedoriadatia.Domain.Product;
 import br.com.menuux.comedoriadatia.Repository.FavoritesRepository;
 import br.com.menuux.comedoriadatia.databinding.ActivityDetailBinding;
 
 public class DetailActivity extends BaseActivity {
     ActivityDetailBinding binding;
-    private ItemDomain object;
+    private Product object;
     private int weight = 1;
     private FirebaseAuth mAuth;
     private FavoritesRepository favoritesRepository;
@@ -45,14 +45,14 @@ public class DetailActivity extends BaseActivity {
     private void initSimilarList() {
         DatabaseReference myRef = database.getReference("Items");
         binding.progressBarSimiliar.setVisibility(View.VISIBLE);
-        ArrayList<ItemDomain> items = new ArrayList<>();
+        ArrayList<Product> items = new ArrayList<>();
 
         myRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if (snapshot.exists()) {
                     for (DataSnapshot issue : snapshot.getChildren()) {
-                        items.add(issue.getValue(ItemDomain.class));
+                        items.add(issue.getValue(Product.class));
                     }
                     if (!items.isEmpty()) {
                         binding.recyclerViewsimiliar.setLayoutManager(new LinearLayoutManager(DetailActivity.this, LinearLayoutManager.HORIZONTAL, false));
@@ -107,7 +107,7 @@ public class DetailActivity extends BaseActivity {
     }
 
     private void getBundles() {
-        object = (ItemDomain) getIntent().getSerializableExtra("object");
+        object = (Product) getIntent().getSerializableExtra("object");
     }
     private String sanitizeKey(String key) {
         return key.replace(".", "").replace("$", "").replace("#", "").replace("[", "").replace("]", "").replace("/", "");
@@ -121,7 +121,6 @@ public class DetailActivity extends BaseActivity {
         String userId = mAuth.getCurrentUser().getUid();
         DatabaseReference cartRef = database.getReference("Carts").child(userId);
 
-        object.setWeight(weight);
         String itemKey = sanitizeKey(object.getTitle());
 
         cartRef.child(itemKey).setValue(object).addOnCompleteListener(task -> {

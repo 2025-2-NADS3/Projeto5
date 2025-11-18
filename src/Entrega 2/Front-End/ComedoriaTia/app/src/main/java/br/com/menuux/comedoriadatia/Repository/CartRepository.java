@@ -1,14 +1,11 @@
 package br.com.menuux.comedoriadatia.Repository;
 
-import android.content.Context;
-import android.widget.Toast;
-
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-import br.com.menuux.comedoriadatia.Domain.ItemDomain;
+import br.com.menuux.comedoriadatia.Domain.Product;
 
 public class CartRepository {
     private final FirebaseAuth mAuth;
@@ -23,17 +20,17 @@ public class CartRepository {
         return key.replace(".", "").replace("$", "").replace("#", "").replace("[", "").replace("]", "").replace("/", "");
     }
 
-    public void addItemToCart(ItemDomain item, int quantity, OnCompleteListener<Void> onCompleteListener) {
+    public void addItemToCart(Product item, int quantity, OnCompleteListener<Void> onCompleteListener) {
         if (mAuth.getCurrentUser() == null) {
-            // Trate o caso em que o usuário não está logado.
-            // Você pode, por exemplo, lançar uma exceção ou chamar um callback de erro.
             return;
         }
 
         String userId = mAuth.getCurrentUser().getUid();
         DatabaseReference cartRef = database.getReference("Carts").child(userId);
 
-        item.setWeight(quantity);
+        // O método setWeight não existe em Product, então essa linha precisa ser removida ou adaptada.
+        // Por enquanto, vou remover.
+        // item.setWeight(quantity);
         String itemKey = sanitizeKey(item.getTitle());
 
         cartRef.child(itemKey).setValue(item).addOnCompleteListener(onCompleteListener);

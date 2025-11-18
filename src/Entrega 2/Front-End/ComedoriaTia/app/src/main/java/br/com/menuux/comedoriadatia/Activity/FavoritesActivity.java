@@ -17,7 +17,7 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 
 import br.com.menuux.comedoriadatia.Adapter.FavoritesAdapter;
-import br.com.menuux.comedoriadatia.Domain.ItemDomain;
+import br.com.menuux.comedoriadatia.Domain.Product;
 import br.com.menuux.comedoriadatia.databinding.ActivityFavoritesBinding;
 
 public class FavoritesActivity extends BaseActivity {
@@ -25,7 +25,7 @@ public class FavoritesActivity extends BaseActivity {
     private FirebaseDatabase database;
     private FirebaseAuth mAuth;
     private FavoritesAdapter adapter;
-    private ArrayList<ItemDomain> favoritesList = new ArrayList<>();
+    private ArrayList<Product> favoritesList = new ArrayList<>();
     private DatabaseReference favoritesRef;
     private ValueEventListener favoritesListener;
 
@@ -60,7 +60,7 @@ public class FavoritesActivity extends BaseActivity {
 
                 if (snapshot.exists()) {
                     for (DataSnapshot issue : snapshot.getChildren()) {
-                        ItemDomain item = issue.getValue(ItemDomain.class);
+                        Product item = issue.getValue(Product.class);
                         if (item != null) {
                             favoritesList.add(item);
                         }

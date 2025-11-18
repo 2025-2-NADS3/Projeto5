@@ -74,6 +74,7 @@
             android:background="@drawable/layout_search"
             android:paddingStart="16dp"
             android:paddingEnd="16dp"
+            android:text="Procurar Pedido"
             android:textColor="@color/black4"
             android:textSize="14sp" />
 

@@ -17,7 +17,7 @@ import java.util.ArrayList;
 
 import br.com.menuux.comedoriadatia.Adapter.BestDealAdapter;
 import br.com.menuux.comedoriadatia.Domain.CategoryDomain;
-import br.com.menuux.comedoriadatia.Domain.ItemDomain;
+import br.com.menuux.comedoriadatia.Domain.Product;
 import br.com.menuux.comedoriadatia.databinding.ActivityCategoryProductsBinding;
 
 public class CategoryProductsActivity extends BaseActivity {
@@ -59,14 +59,14 @@ public class CategoryProductsActivity extends BaseActivity {
 
         DatabaseReference itemsRef = database.getReference("Items");
         binding.progressBar.setVisibility(View.VISIBLE);
-        ArrayList<ItemDomain> categoryItems = new ArrayList<>();
+        ArrayList<Product> categoryItems = new ArrayList<>();
 
         itemsRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if (snapshot.exists()) {
                     for (DataSnapshot issue : snapshot.getChildren()) {
-                        ItemDomain item = issue.getValue(ItemDomain.class);
+                        Product item = issue.getValue(Product.class);
                         if (item != null && item.getCategoryId() == category.getId()) {
                             categoryItems.add(item);
                         }

@@ -12,10 +12,11 @@ public class Product implements Serializable {
     private String id;
     private String Title;
     private String Description;
-    private long CategoryId;
+    private int CategoryId;
     private double Price;
     private String ImagePath;
     private double Star;
+    private int weight; // Adicionado
 
     public Product() {
         // Construtor vazio necessário para o Firebase
@@ -46,11 +47,11 @@ public class Product implements Serializable {
         this.Description = description;
     }
 
-    public long getCategoryId() {
+    public int getCategoryId() {
         return CategoryId;
     }
 
-    public void setCategoryId(long categoryId) {
+    public void setCategoryId(int categoryId) {
         this.CategoryId = categoryId;
     }
 
@@ -76,5 +77,14 @@ public class Product implements Serializable {
 
     public void setStar(double star) {
         this.Star = star;
+    }
+
+    // Métodos adicionados
+    public int getWeight() {
+        return weight;
+    }
+
+    public void setWeight(int weight) {
+        this.weight = weight;
     }
 }

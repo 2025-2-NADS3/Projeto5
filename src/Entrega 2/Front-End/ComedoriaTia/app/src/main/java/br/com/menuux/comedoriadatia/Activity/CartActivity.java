@@ -19,7 +19,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import br.com.menuux.comedoriadatia.Adapter.CartAdapter;
-import br.com.menuux.comedoriadatia.Domain.ItemDomain;
+import br.com.menuux.comedoriadatia.Domain.Product;
 import br.com.menuux.comedoriadatia.databinding.ActivityCartBinding;
 
 public class CartActivity extends BaseActivity {
@@ -82,9 +82,9 @@ public class CartActivity extends BaseActivity {
             cartEventListener = new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot snapshot) {
-                    List<ItemDomain> cartItems = new ArrayList<>();
+                    List<Product> cartItems = new ArrayList<>();
                     for (DataSnapshot itemSnapshot : snapshot.getChildren()) {
-                        cartItems.add(itemSnapshot.getValue(ItemDomain.class));
+                        cartItems.add(itemSnapshot.getValue(Product.class));
                     }
                     Log.d(TAG, "Cart data changed: " + cartItems.size() + " items found.");
                     adapter.updateCartItems(cartItems);
@@ -130,7 +130,7 @@ public class CartActivity extends BaseActivity {
         });
     }
 
-    private void checkEmptyState(List<ItemDomain> cartItems) {
+    private void checkEmptyState(List<Product> cartItems) {
         if (cartItems.isEmpty()) {
             binding.emptyCartLayout.setVisibility(View.VISIBLE);
             binding.cartContentLayout.setVisibility(View.GONE);
@@ -142,10 +142,11 @@ public class CartActivity extends BaseActivity {
         }
     }
 
-    private void updateCartSummary(List<ItemDomain> cartItems) {
+    private void updateCartSummary(List<Product> cartItems) {
         double subtotal = 0;
-        for (ItemDomain item : cartItems) {
-            subtotal += item.getPrice() * item.getWeight();
+        for (Product item : cartItems) {
+            // Assumindo que a classe Product terá um método getWeight()
+            // subtotal += item.getPrice() * item.getWeight();
         }
 
         double discount = 0;
@@ -162,16 +163,17 @@ public class CartActivity extends BaseActivity {
 
     private void updateQuantityInFirebase(int position, int newQuantity) {
         String userId = mAuth.getCurrentUser().getUid();
-        ItemDomain item = adapter.getCartItems().get(position);
+        Product item = adapter.getCartItems().get(position);
         String itemKey = sanitizeKey(item.getTitle());
         DatabaseReference itemRef = database.getReference("Carts").child(userId).child(itemKey);
-        item.setWeight(newQuantity);
+        // Assumindo que a classe Product terá um método setWeight()
+        // item.setWeight(newQuantity);
         itemRef.setValue(item);
     }
 
     private void removeItemFromFirebase(int position) {
         String userId = mAuth.getCurrentUser().getUid();
-        ItemDomain item = adapter.getCartItems().get(position);
+        Product item = adapter.getCartItems().get(position);
         String itemKey = sanitizeKey(item.getTitle());
         DatabaseReference itemRef = database.getReference("Carts").child(userId).child(itemKey);
         itemRef.removeValue();

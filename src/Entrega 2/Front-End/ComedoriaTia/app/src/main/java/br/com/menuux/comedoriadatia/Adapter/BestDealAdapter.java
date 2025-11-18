@@ -17,18 +17,18 @@ import com.google.firebase.database.FirebaseDatabase;
 import java.util.ArrayList;
 
 import br.com.menuux.comedoriadatia.Activity.DetailActivity;
-import br.com.menuux.comedoriadatia.Domain.ItemDomain;
+import br.com.menuux.comedoriadatia.Domain.Product;
 import br.com.menuux.comedoriadatia.Repository.CartRepository;
 import br.com.menuux.comedoriadatia.Repository.FavoritesRepository;
 import br.com.menuux.comedoriadatia.databinding.ViewholderBestDealBinding;
 
 public class BestDealAdapter extends RecyclerView.Adapter<BestDealAdapter.Viewholder> {
-    private final ArrayList<ItemDomain> items;
+    private final ArrayList<Product> items;
     private Context context;
     private final CartRepository cartRepository;
     private final FavoritesRepository favoritesRepository;
 
-    public BestDealAdapter(ArrayList<ItemDomain> items, FirebaseAuth mAuth, FirebaseDatabase database) {
+    public BestDealAdapter(ArrayList<Product> items, FirebaseAuth mAuth, FirebaseDatabase database) {
         this.items = items;
         this.cartRepository = new CartRepository(mAuth, database);
         this.favoritesRepository = new FavoritesRepository(mAuth, database);
@@ -80,7 +80,7 @@ public class BestDealAdapter extends RecyclerView.Adapter<BestDealAdapter.Viewho
         }
     }
 
-    private void addToCart(ItemDomain item) {
+    private void addToCart(Product item) {
         cartRepository.addItemToCart(item, 1, task -> {
             if (task.isSuccessful()) {
                 Toast.makeText(context, "Item adicionado ao carrinho!", Toast.LENGTH_SHORT).show();
@@ -91,7 +91,7 @@ public class BestDealAdapter extends RecyclerView.Adapter<BestDealAdapter.Viewho
         });
     }
 
-    private void addToFavorites(ItemDomain item) {
+    private void addToFavorites(Product item) {
         favoritesRepository.addToFavorites(item, task -> {
             if (task.isSuccessful()) {
                 Toast.makeText(context, "Adicionado aos Favoritos!", Toast.LENGTH_SHORT).show();

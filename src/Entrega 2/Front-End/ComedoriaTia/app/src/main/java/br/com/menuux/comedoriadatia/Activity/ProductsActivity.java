@@ -23,6 +23,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import br.com.menuux.comedoriadatia.Adapter.ProductAdapter;
+import br.com.menuux.comedoriadatia.Domain.CategoryDomain;
 import br.com.menuux.comedoriadatia.Domain.Product;
 import br.com.menuux.comedoriadatia.R;
 
@@ -31,7 +32,9 @@ public class ProductsActivity extends AppCompatActivity implements ProductAdapte
     private RecyclerView recyclerView;
     private ProductAdapter adapter;
     private List<Product> productList;
-    private DatabaseReference databaseReference;
+    private List<CategoryDomain> categoryList;
+    private DatabaseReference productsRef;
+    private DatabaseReference categoriesRef;
     private ProgressBar progressBar;
     private TextView emptyStateText;
 
@@ -40,14 +43,16 @@ public class ProductsActivity extends AppCompatActivity implements ProductAdapte
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_products);
 
-        databaseReference = FirebaseDatabase.getInstance().getReference("Items");
+        productsRef = FirebaseDatabase.getInstance().getReference("Items");
+        categoriesRef = FirebaseDatabase.getInstance().getReference("Category");
 
         recyclerView = findViewById(R.id.productsRecyclerView);
         progressBar = findViewById(R.id.progressBar);
         emptyStateText = findViewById(R.id.emptyStateText);
 
         productList = new ArrayList<>();
-        adapter = new ProductAdapter(this, productList, this);
+        categoryList = new ArrayList<>();
+        adapter = new ProductAdapter(this, productList, categoryList, this);
 
         recyclerView.setLayoutManager(new GridLayoutManager(this, 2));
         recyclerView.setAdapter(adapter);
@@ -61,15 +66,39 @@ public class ProductsActivity extends AppCompatActivity implements ProductAdapte
     @Override
     protected void onResume() {
         super.onResume();
-        loadProducts();
+        loadCategoriesAndThenProducts();
     }
 
-    private void loadProducts() {
+    private void loadCategoriesAndThenProducts() {
         progressBar.setVisibility(View.VISIBLE);
         recyclerView.setVisibility(View.GONE);
         emptyStateText.setVisibility(View.GONE);
 
-        databaseReference.addValueEventListener(new ValueEventListener() {
+        categoriesRef.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                categoryList.clear();
+                for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
+                    CategoryDomain category = dataSnapshot.getValue(CategoryDomain.class);
+                    if (category != null) {
+                        categoryList.add(category);
+                    }
+                }
+                loadProducts();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                progressBar.setVisibility(View.GONE);
+                Toast.makeText(ProductsActivity.this, "Erro ao buscar categorias.", Toast.LENGTH_SHORT).show();
+                emptyStateText.setText("Erro ao carregar categorias.");
+                emptyStateText.setVisibility(View.VISIBLE);
+            }
+        });
+    }
+
+    private void loadProducts() {
+        productsRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 progressBar.setVisibility(View.GONE);
@@ -120,7 +149,7 @@ public class ProductsActivity extends AppCompatActivity implements ProductAdapte
     }
 
     private void deleteProductFromDatabase(Product product) {
-        databaseReference.child(product.getId()).removeValue()
+        productsRef.child(product.getId()).removeValue()
                 .addOnSuccessListener(aVoid -> {
                     Toast.makeText(ProductsActivity.this, "Produto excluído!", Toast.LENGTH_SHORT).show();
                     // O ValueEventListener irá atualizar a lista automaticamente
